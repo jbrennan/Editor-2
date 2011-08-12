@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class JBMainWindowController;
 @interface JBAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) IBOutlet NSWindow *window;
+@property (nonatomic, strong) JBMainWindowController *mainWindowController;
 
 @end

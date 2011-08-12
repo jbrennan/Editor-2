@@ -13,6 +13,9 @@
 		CD15122413F5ECBF001AEA49 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CD15122213F5ECBF001AEA49 /* Credits.rtf */; };
 		CD15122713F5ECBF001AEA49 /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD15122613F5ECBF001AEA49 /* JBAppDelegate.m */; };
 		CD15122A13F5ECBF001AEA49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD15122813F5ECBF001AEA49 /* MainMenu.xib */; };
+		CD15123513F5ECED001AEA49 /* Editor Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD15123413F5ECED001AEA49 /* Editor Icon.icns */; };
+		CD15123813F5ED2F001AEA49 /* JBMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */; };
+		CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD15123913F5ED47001AEA49 /* JBMainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,18 @@
 		CD15121613F5ECBF001AEA49 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CD15121713F5ECBF001AEA49 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CD15121813F5ECBF001AEA49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CD15121B13F5ECBF001AEA49 /* Editor2-Info.plist */ = {isa = PBXFileReference; path = "Editor2-Info.plist"; sourceTree = "<group>"; };
+		CD15121B13F5ECBF001AEA49 /* Editor2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Editor2-Info.plist"; sourceTree = "<group>"; };
 		CD15121D13F5ECBF001AEA49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD15121F13F5ECBF001AEA49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CD15122113F5ECBF001AEA49 /* Editor2-Prefix.pch */ = {isa = PBXFileReference; path = "Editor2-Prefix.pch"; sourceTree = "<group>"; };
+		CD15122113F5ECBF001AEA49 /* Editor2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Editor2-Prefix.pch"; sourceTree = "<group>"; };
 		CD15122313F5ECBF001AEA49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CD15122513F5ECBF001AEA49 /* JBAppDelegate.h */ = {isa = PBXFileReference; path = JBAppDelegate.h; sourceTree = "<group>"; };
+		CD15122513F5ECBF001AEA49 /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
 		CD15122613F5ECBF001AEA49 /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
 		CD15122913F5ECBF001AEA49 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CD15123413F5ECED001AEA49 /* Editor Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "Editor Icon.icns"; path = "../Editor Icon.icns"; sourceTree = "<group>"; };
+		CD15123613F5ED2F001AEA49 /* JBMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMainWindowController.h; sourceTree = "<group>"; };
+		CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMainWindowController.m; sourceTree = "<group>"; };
+		CD15123913F5ED47001AEA49 /* JBMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBMainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,9 @@
 				CD15122613F5ECBF001AEA49 /* JBAppDelegate.m */,
 				CD15122813F5ECBF001AEA49 /* MainMenu.xib */,
 				CD15121A13F5ECBF001AEA49 /* Supporting Files */,
+				CD15123613F5ED2F001AEA49 /* JBMainWindowController.h */,
+				CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */,
+				CD15123913F5ED47001AEA49 /* JBMainWindow.xib */,
 			);
 			path = Editor2;
 			sourceTree = "<group>";
@@ -93,6 +103,7 @@
 		CD15121A13F5ECBF001AEA49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD15123413F5ECED001AEA49 /* Editor Icon.icns */,
 				CD15121B13F5ECBF001AEA49 /* Editor2-Info.plist */,
 				CD15121C13F5ECBF001AEA49 /* InfoPlist.strings */,
 				CD15121F13F5ECBF001AEA49 /* main.m */,
@@ -156,6 +167,8 @@
 				CD15121E13F5ECBF001AEA49 /* InfoPlist.strings in Resources */,
 				CD15122413F5ECBF001AEA49 /* Credits.rtf in Resources */,
 				CD15122A13F5ECBF001AEA49 /* MainMenu.xib in Resources */,
+				CD15123513F5ECED001AEA49 /* Editor Icon.icns in Resources */,
+				CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +181,7 @@
 			files = (
 				CD15122013F5ECBF001AEA49 /* main.m in Sources */,
 				CD15122713F5ECBF001AEA49 /* JBAppDelegate.m in Sources */,
+				CD15123813F5ED2F001AEA49 /* JBMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

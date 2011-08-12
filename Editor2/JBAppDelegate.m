@@ -7,14 +7,19 @@
 //
 
 #import "JBAppDelegate.h"
+#import "JBMainWindowController.h"
+
 
 @implementation JBAppDelegate
 
 @synthesize window = _window;
+@synthesize mainWindowController = _mainWindowController;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	// Insert code here to initialize your application
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	self.mainWindowController = [[JBMainWindowController alloc] initWithWindowNibName:@"JBMainWindow"];
+	
+	[[self.mainWindowController window] makeKeyAndOrderFront:self];
 }
 
 @end
