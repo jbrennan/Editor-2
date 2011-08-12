@@ -8,10 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class JBSplitView;
+@class JBArticleTableViewController;
 @interface JBMainWindowController : NSWindowController {
-	NSSplitView *_splitView;
+	JBSplitView *_splitView;
+	JBArticleTableViewController *_articleTableViewController;
 }
 
 
-@property (strong) IBOutlet NSSplitView *splitView;
+@property (strong) IBOutlet JBSplitView *splitView;
+@property (nonatomic, strong) JBArticleTableViewController *articleTableViewController;
+
 @end

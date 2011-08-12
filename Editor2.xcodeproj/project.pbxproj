@@ -16,6 +16,10 @@
 		CD15123513F5ECED001AEA49 /* Editor Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD15123413F5ECED001AEA49 /* Editor Icon.icns */; };
 		CD15123813F5ED2F001AEA49 /* JBMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */; };
 		CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD15123913F5ED47001AEA49 /* JBMainWindow.xib */; };
+		CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */; };
+		CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */; };
+		CDFDFB7013F5F2870021EA6A /* JBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */; };
+		CDFDFB7413F5F2AD0021EA6A /* NSSplitView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB7313F5F2AD0021EA6A /* NSSplitView+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,13 @@
 		CD15123613F5ED2F001AEA49 /* JBMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMainWindowController.h; sourceTree = "<group>"; };
 		CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMainWindowController.m; sourceTree = "<group>"; };
 		CD15123913F5ED47001AEA49 /* JBMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBMainWindow.xib; sourceTree = "<group>"; };
+		CD9A017E13F5EFC100D59C00 /* JBArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArticleTableViewController.h; sourceTree = "<group>"; };
+		CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArticleTableViewController.m; sourceTree = "<group>"; };
+		CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBArticleTableViewController.xib; sourceTree = "<group>"; };
+		CDFDFB6E13F5F2870021EA6A /* JBSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSplitView.h; sourceTree = "<group>"; };
+		CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSplitView.m; sourceTree = "<group>"; };
+		CDFDFB7213F5F2AD0021EA6A /* NSSplitView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Utilities.h"; sourceTree = "<group>"; };
+		CDFDFB7313F5F2AD0021EA6A /* NSSplitView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSplitView+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +100,10 @@
 		CD15121913F5ECBF001AEA49 /* Editor2 */ = {
 			isa = PBXGroup;
 			children = (
+				CDFDFB7213F5F2AD0021EA6A /* NSSplitView+Utilities.h */,
+				CDFDFB7313F5F2AD0021EA6A /* NSSplitView+Utilities.m */,
+				CDFDFB6E13F5F2870021EA6A /* JBSplitView.h */,
+				CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */,
 				CD15122513F5ECBF001AEA49 /* JBAppDelegate.h */,
 				CD15122613F5ECBF001AEA49 /* JBAppDelegate.m */,
 				CD15122813F5ECBF001AEA49 /* MainMenu.xib */,
@@ -96,6 +111,9 @@
 				CD15123613F5ED2F001AEA49 /* JBMainWindowController.h */,
 				CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */,
 				CD15123913F5ED47001AEA49 /* JBMainWindow.xib */,
+				CD9A017E13F5EFC100D59C00 /* JBArticleTableViewController.h */,
+				CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */,
+				CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */,
 			);
 			path = Editor2;
 			sourceTree = "<group>";
@@ -169,6 +187,7 @@
 				CD15122A13F5ECBF001AEA49 /* MainMenu.xib in Resources */,
 				CD15123513F5ECED001AEA49 /* Editor Icon.icns in Resources */,
 				CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */,
+				CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +201,9 @@
 				CD15122013F5ECBF001AEA49 /* main.m in Sources */,
 				CD15122713F5ECBF001AEA49 /* JBAppDelegate.m in Sources */,
 				CD15123813F5ED2F001AEA49 /* JBMainWindowController.m in Sources */,
+				CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */,
+				CDFDFB7013F5F2870021EA6A /* JBSplitView.m in Sources */,
+				CDFDFB7413F5F2AD0021EA6A /* NSSplitView+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +325,7 @@
 				CD15122F13F5ECBF001AEA49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
