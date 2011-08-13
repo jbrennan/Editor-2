@@ -12,10 +12,14 @@
 	NSButton *_plusButton;
 	NSPopUpButton *_popupButton;
 	NSTableView *_tableView;
+	NSArrayController *_arrayController;
 }
 
 @property (strong) IBOutlet NSButton *plusButton;
 @property (strong) IBOutlet NSPopUpButton *popupButton;
 @property (strong) IBOutlet NSTableView *tableView;
+@property (strong) IBOutlet NSArrayController *arrayController;
+@property (nonatomic, strong) NSMutableArray *internalArrayOfArticles;
 
+- (IBAction)plusButtonWasPressed:(NSButton *)sender;
 @end

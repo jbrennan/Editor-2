@@ -12,15 +12,20 @@
 @synthesize plusButton = _plusButton;
 @synthesize popupButton = _popupButton;
 @synthesize tableView = _tableView;
+@synthesize arrayController = _arrayController;
+@synthesize internalArrayOfArticles = _internalArrayOfArticles;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
+		self.internalArrayOfArticles = [NSMutableArray array];
     }
     
     return self;
 }
 
+- (IBAction)plusButtonWasPressed:(NSButton *)sender {
+}
 @end

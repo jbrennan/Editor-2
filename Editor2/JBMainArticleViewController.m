@@ -61,6 +61,7 @@
 #pragma mark -
 #pragma mark Text preview methods
 
+// These methods, along with the NSString+Markdown Category are ripped almost verbatim from Steven Frank's Notational Velocity fork.
 - (void)textDidChange:(NSNotification *)note {
 	
 	[self requestPreviewUpdate];
