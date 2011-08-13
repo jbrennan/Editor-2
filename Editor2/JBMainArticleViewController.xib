@@ -237,7 +237,7 @@
 															<string>WebURLsWithTitlesPboardType</string>
 															<string>public.url</string>
 														</set>
-														<string key="NSFrame">{{0, 2}, {900, 14}}</string>
+														<string key="NSFrameSize">{900, 14}</string>
 														<reference key="NSSuperview" ref="782233895"/>
 														<reference key="NSWindow"/>
 														<reference key="NSNextKeyView" ref="581252875"/>

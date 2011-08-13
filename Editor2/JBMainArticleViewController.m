@@ -30,5 +30,13 @@
 }
 
 
+- (void)awakeFromNib {
+	
+	NSURL *address = [NSURL URLWithString:@"http://vernacularoracular.com"];
+	NSURLRequest *request = [NSURLRequest requestWithURL:address];
+	
+	[[self.webView mainFrame] loadRequest:request];
+}
+
 
 @end

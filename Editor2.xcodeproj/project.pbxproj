@@ -21,6 +21,9 @@
 		CD8B13A013F5F64000FDD49A /* JBMainArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */; };
 		CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */; };
 		CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */; };
+		CDC9F51D13F6EF64001E6017 /* License.text in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51A13F6EF64001E6017 /* License.text */; };
+		CDC9F51E13F6EF64001E6017 /* Markdown Readme.text in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */; };
+		CDC9F51F13F6EF64001E6017 /* Markdown.pl in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51C13F6EF64001E6017 /* Markdown.pl */; };
 		CDFDFB7013F5F2870021EA6A /* JBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */; };
 		CDFDFB7413F5F2AD0021EA6A /* NSSplitView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB7313F5F2AD0021EA6A /* NSSplitView+Utilities.m */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,9 @@
 		CD9A017E13F5EFC100D59C00 /* JBArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArticleTableViewController.h; sourceTree = "<group>"; };
 		CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArticleTableViewController.m; sourceTree = "<group>"; };
 		CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBArticleTableViewController.xib; sourceTree = "<group>"; };
+		CDC9F51A13F6EF64001E6017 /* License.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.text; sourceTree = "<group>"; };
+		CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Markdown Readme.text"; sourceTree = "<group>"; };
+		CDC9F51C13F6EF64001E6017 /* Markdown.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = Markdown.pl; sourceTree = "<group>"; };
 		CDFDFB6E13F5F2870021EA6A /* JBSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSplitView.h; sourceTree = "<group>"; };
 		CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSplitView.m; sourceTree = "<group>"; };
 		CDFDFB7213F5F2AD0021EA6A /* NSSplitView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Utilities.h"; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		CD15121913F5ECBF001AEA49 /* Editor2 */ = {
 			isa = PBXGroup;
 			children = (
+				CDC9F51913F6EF64001E6017 /* Markdown_1.0.1 */,
 				CDFDFB7213F5F2AD0021EA6A /* NSSplitView+Utilities.h */,
 				CDFDFB7313F5F2AD0021EA6A /* NSSplitView+Utilities.m */,
 				CDFDFB6E13F5F2870021EA6A /* JBSplitView.h */,
@@ -141,6 +148,16 @@
 				CD15122213F5ECBF001AEA49 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDC9F51913F6EF64001E6017 /* Markdown_1.0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9F51A13F6EF64001E6017 /* License.text */,
+				CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */,
+				CDC9F51C13F6EF64001E6017 /* Markdown.pl */,
+			);
+			path = Markdown_1.0.1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +218,9 @@
 				CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */,
 				CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */,
 				CD8B13A013F5F64000FDD49A /* JBMainArticleViewController.xib in Resources */,
+				CDC9F51D13F6EF64001E6017 /* License.text in Resources */,
+				CDC9F51E13F6EF64001E6017 /* Markdown Readme.text in Resources */,
+				CDC9F51F13F6EF64001E6017 /* Markdown.pl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

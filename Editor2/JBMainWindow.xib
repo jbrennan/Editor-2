@@ -40,7 +40,7 @@
 			<object class="NSWindowTemplate" id="1005">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 240}, {980, 633}}</string>
+				<string key="NSWindowRect">{{196, 240}, {980, 635}}</string>
 				<int key="NSWTFlags">544735232</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -60,7 +60,7 @@
 								<object class="NSCustomView" id="283970828">
 									<reference key="NSNextResponder" ref="967829439"/>
 									<int key="NSvFlags">4356</int>
-									<string key="NSFrameSize">{320, 633}</string>
+									<string key="NSFrameSize">{320, 603}</string>
 									<reference key="NSSuperview" ref="967829439"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="950541623"/>
@@ -70,15 +70,14 @@
 								<object class="NSCustomView" id="950541623">
 									<reference key="NSNextResponder" ref="967829439"/>
 									<int key="NSvFlags">4353</int>
-									<string key="NSFrame">{{321, 0}, {659, 633}}</string>
+									<string key="NSFrame">{{321, 0}, {659, 603}}</string>
 									<reference key="NSSuperview" ref="967829439"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:601</string>
 									<string key="NSClassName">NSView</string>
 								</object>
 							</object>
-							<string key="NSFrameSize">{980, 633}</string>
+							<string key="NSFrame">{{0, 32}, {980, 603}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="283970828"/>
@@ -87,7 +86,7 @@
 							<int key="NSDividerStyle">2</int>
 						</object>
 					</object>
-					<string key="NSFrameSize">{980, 633}</string>
+					<string key="NSFrameSize">{980, 635}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="967829439"/>
@@ -95,6 +94,8 @@
 				<string key="NSScreenRect">{{0, 0}, {2560, 1578}}</string>
 				<string key="NSMinSize">{980, 655}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
+				<bool key="NSAutorecalculatesContentBorderThicknessMinY">NO</bool>
+				<double key="NSContentBorderThicknessMinY">32</double>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 		</object>
