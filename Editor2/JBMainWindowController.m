@@ -10,11 +10,13 @@
 #import "JBArticleTableViewController.h"
 #import "JBSplitView.h"
 #import "NSSplitView+Utilities.h"
+#import "JBMainArticleViewController.h"
 
 
 @implementation JBMainWindowController
 @synthesize splitView = _splitView;
 @synthesize articleTableViewController = _articleTableViewController;
+@synthesize mainArticleViewController = _mainArticleViewController;
 
 
 - (id)initWithWindow:(NSWindow *)window {
@@ -33,9 +35,10 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 	
 	self.articleTableViewController = [[JBArticleTableViewController alloc] initWithNibName:@"JBArticleTableViewController" bundle:nil];
+	self.mainArticleViewController = [[JBMainArticleViewController alloc] initWithNibName:@"JBMainArticleViewController" bundle:nil];
 	
 	self.splitView.leftView = [[self articleTableViewController] view];
-	
+	self.splitView.rightView = [[self mainArticleViewController] view];
 	
 }
 

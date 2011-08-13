@@ -16,6 +16,9 @@
 		CD15123513F5ECED001AEA49 /* Editor Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD15123413F5ECED001AEA49 /* Editor Icon.icns */; };
 		CD15123813F5ED2F001AEA49 /* JBMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */; };
 		CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD15123913F5ED47001AEA49 /* JBMainWindow.xib */; };
+		CD269B7413F5F85800955EED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD269B7313F5F85800955EED /* WebKit.framework */; };
+		CD8B139F13F5F64000FDD49A /* JBMainArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8B139D13F5F64000FDD49A /* JBMainArticleViewController.m */; };
+		CD8B13A013F5F64000FDD49A /* JBMainArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */; };
 		CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */; };
 		CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */; };
 		CDFDFB7013F5F2870021EA6A /* JBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */; };
@@ -40,6 +43,10 @@
 		CD15123613F5ED2F001AEA49 /* JBMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMainWindowController.h; sourceTree = "<group>"; };
 		CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMainWindowController.m; sourceTree = "<group>"; };
 		CD15123913F5ED47001AEA49 /* JBMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBMainWindow.xib; sourceTree = "<group>"; };
+		CD269B7313F5F85800955EED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CD8B139C13F5F64000FDD49A /* JBMainArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMainArticleViewController.h; sourceTree = "<group>"; };
+		CD8B139D13F5F64000FDD49A /* JBMainArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMainArticleViewController.m; sourceTree = "<group>"; };
+		CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBMainArticleViewController.xib; sourceTree = "<group>"; };
 		CD9A017E13F5EFC100D59C00 /* JBArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArticleTableViewController.h; sourceTree = "<group>"; };
 		CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArticleTableViewController.m; sourceTree = "<group>"; };
 		CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBArticleTableViewController.xib; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD269B7413F5F85800955EED /* WebKit.framework in Frameworks */,
 				CD15121413F5ECBF001AEA49 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +72,7 @@
 		CD15120413F5ECBF001AEA49 = {
 			isa = PBXGroup;
 			children = (
+				CD269B7313F5F85800955EED /* WebKit.framework */,
 				CD15121913F5ECBF001AEA49 /* Editor2 */,
 				CD15121213F5ECBF001AEA49 /* Frameworks */,
 				CD15121013F5ECBF001AEA49 /* Products */,
@@ -114,6 +123,9 @@
 				CD9A017E13F5EFC100D59C00 /* JBArticleTableViewController.h */,
 				CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */,
 				CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */,
+				CD8B139C13F5F64000FDD49A /* JBMainArticleViewController.h */,
+				CD8B139D13F5F64000FDD49A /* JBMainArticleViewController.m */,
+				CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */,
 			);
 			path = Editor2;
 			sourceTree = "<group>";
@@ -188,6 +200,7 @@
 				CD15123513F5ECED001AEA49 /* Editor Icon.icns in Resources */,
 				CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */,
 				CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */,
+				CD8B13A013F5F64000FDD49A /* JBMainArticleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +217,7 @@
 				CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */,
 				CDFDFB7013F5F2870021EA6A /* JBSplitView.m in Sources */,
 				CDFDFB7413F5F2AD0021EA6A /* NSSplitView+Utilities.m in Sources */,
+				CD8B139F13F5F64000FDD49A /* JBMainArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

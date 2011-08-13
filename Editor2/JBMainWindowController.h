@@ -10,13 +10,17 @@
 
 @class JBSplitView;
 @class JBArticleTableViewController;
+@class JBMainArticleViewController;
+
 @interface JBMainWindowController : NSWindowController {
 	JBSplitView *_splitView;
 	JBArticleTableViewController *_articleTableViewController;
+	JBMainArticleViewController *_mainArticleViewController;
 }
 
 
 @property (strong) IBOutlet JBSplitView *splitView;
 @property (nonatomic, strong) JBArticleTableViewController *articleTableViewController;
+@property (nonatomic, strong) JBMainArticleViewController *mainArticleViewController;
 
 @end
