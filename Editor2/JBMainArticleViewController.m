@@ -9,6 +9,16 @@
 #import "JBMainArticleViewController.h"
 #import "JBSplitView.h"
 #import "NSSplitView+Utilities.h"
+#import "NSString+Markdown.h"
+
+
+@interface JBMainArticleViewController ()
+
+- (void)textDidChange:(NSNotification *)notification;
+- (void)requestPreviewUpdate;
+- (void)preview:(id)object;
+
+@end
 
 
 @implementation JBMainArticleViewController
@@ -30,12 +40,45 @@
 }
 
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
 - (void)awakeFromNib {
 	
 	NSURL *address = [NSURL URLWithString:@"http://vernacularoracular.com"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:address];
 	
 	[[self.webView mainFrame] loadRequest:request];
+	
+	[NSString stringByProcessingMarkdown:@"blah"];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
+}
+
+
+#pragma mark -
+#pragma mark Text preview methods
+
+- (void)textDidChange:(NSNotification *)note {
+	
+	[self requestPreviewUpdate];
+	
+}
+
+
+- (void)requestPreviewUpdate {
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(preview:) object:nil];
+	
+	[self performSelector:@selector(preview:) withObject:nil afterDelay:0.5];
+}
+
+
+- (void)preview:(id)object {
+	NSString *markdownString = [NSString stringByProcessingMarkdown:[_textView string]];
+	
+	[[_webView mainFrame] loadHTMLString:markdownString baseURL:nil];
 }
 
 
