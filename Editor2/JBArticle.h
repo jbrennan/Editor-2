@@ -50,6 +50,7 @@
 @property (nonatomic, retain) NSDate *updatedAtDate;
 @property (nonatomic, copy) NSString *bodyText;
 @property (nonatomic, getter=isArticleUpdated) BOOL articleUpdated;
+@property (nonatomic, readonly) NSString *bunchedUpBodyText; // Extra newlines stripped out for display in the table cells.
 
 
 - (id)initNewArticle;

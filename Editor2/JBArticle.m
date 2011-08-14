@@ -37,6 +37,11 @@
 }
 
 
+- (NSString *)bunchedUpBodyText {
+	return [self.bodyText stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
+}
+
+
 - (id)initNewArticle {
 	if (self = [super init]) {
 		_articleUpdated = YES;

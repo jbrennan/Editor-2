@@ -20,6 +20,7 @@
 @property (strong) IBOutlet NSTableView *tableView;
 @property (strong) IBOutlet NSArrayController *arrayController;
 @property (nonatomic, strong) NSMutableArray *internalArrayOfArticles;
+@property (nonatomic, readonly) NSArray *createdAtDateSorter;
 
 - (IBAction)plusButtonWasPressed:(NSButton *)sender;
 @end

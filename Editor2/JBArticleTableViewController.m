@@ -39,6 +39,12 @@
 }
 
 
+- (NSArray *)createdAtDateSorter {
+	NSLog(@"Sorter?");
+	return [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"self.createdAtDate" ascending:NO]];
+}
+
+
 - (IBAction)plusButtonWasPressed:(NSButton *)sender {
 }
 
