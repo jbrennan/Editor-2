@@ -8,6 +8,7 @@
 
 #import "JBArticleTableViewController.h"
 #import "JBArticle.h"
+#import "JBMainArticleViewController.h"
 
 
 @interface JBArticleTableViewController ()
@@ -21,6 +22,7 @@
 @synthesize tableView = _tableView;
 @synthesize arrayController = _arrayController;
 @synthesize internalArrayOfArticles = _internalArrayOfArticles;
+@synthesize mainArticleViewController = _mainArticleViewController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

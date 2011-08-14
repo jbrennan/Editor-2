@@ -37,6 +37,9 @@
 	self.articleTableViewController = [[JBArticleTableViewController alloc] initWithNibName:@"JBArticleTableViewController" bundle:nil];
 	self.mainArticleViewController = [[JBMainArticleViewController alloc] initWithNibName:@"JBMainArticleViewController" bundle:nil];
 	
+	self.articleTableViewController.mainArticleViewController = self.mainArticleViewController;
+	self.mainArticleViewController.articleTableViewController = self.articleTableViewController;
+	
 	self.splitView.leftView = [[self articleTableViewController] view];
 	self.splitView.rightView = [[self mainArticleViewController] view];
 	

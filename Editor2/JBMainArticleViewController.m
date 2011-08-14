@@ -10,6 +10,7 @@
 #import "JBSplitView.h"
 #import "NSSplitView+Utilities.h"
 #import "NSString+Markdown.h"
+#import "JBArticleTableViewController.h"
 
 
 @interface JBMainArticleViewController ()
@@ -28,6 +29,7 @@
 @synthesize sourceTextField = _sourceTextField;
 @synthesize headlineTextField = _headlineTextField;
 @synthesize altTextField = _altTextField;
+@synthesize articleTableViewController = _articleTableViewController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -52,7 +54,7 @@
 	
 	[[self.webView mainFrame] loadRequest:request];
 	
-	[NSString stringByProcessingMarkdown:@"blah"];
+	[self requestPreviewUpdate];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
 }

@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class JBSplitView;
+@class JBArticleTableViewController;
 @interface JBMainArticleViewController : NSViewController {
 	JBSplitView *_splitView;
 	NSTextView *_textView;
@@ -24,5 +25,6 @@
 @property (strong) IBOutlet NSTextField *sourceTextField;
 @property (strong) IBOutlet NSTextField *headlineTextField;
 @property (strong) IBOutlet NSTextField *altTextField;
+@property (nonatomic, unsafe_unretained) JBArticleTableViewController *articleTableViewController;
 
 @end

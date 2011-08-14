@@ -3,18 +3,19 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1070</int>
 		<string key="IBDocument.SystemVersion">11A511</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1910</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1617</string>
 		<string key="IBDocument.AppKitVersion">1138</string>
 		<string key="IBDocument.HIToolboxVersion">566.00</string>
 		<dictionary class="NSMutableDictionary" key="IBDocument.PluginVersions">
-			<string key="com.apple.InterfaceBuilder.CocoaPlugin">1910</string>
-			<string key="com.apple.WebKitIBPlugin">822</string>
+			<string key="com.apple.InterfaceBuilder.CocoaPlugin">1617</string>
+			<string key="com.apple.WebKitIBPlugin">518</string>
 		</dictionary>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSSplitView</string>
 			<string>NSTextField</string>
 			<string>NSScrollView</string>
 			<string>NSTextFieldCell</string>
+			<string>NSObjectController</string>
 			<string>WebView</string>
 			<string>NSCustomView</string>
 			<string>NSTextView</string>
@@ -25,10 +26,7 @@
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string>com.apple.WebKitIBPlugin</string>
 		</array>
-		<object class="NSMutableDictionary" key="IBDocument.Metadata">
-			<string key="NS.key.0">PluginDependencyRecalculationVersion</string>
-			<integer value="1" key="NS.object.0"/>
-		</object>
+		<dictionary class="NSMutableDictionary" key="IBDocument.Metadata"/>
 		<array class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<object class="NSCustomObject" id="1001">
 				<string key="NSClassName">JBMainArticleViewController</string>
@@ -261,7 +259,7 @@
 															<int key="NSTCFlags">1</int>
 														</object>
 														<object class="NSTextViewSharedData" key="NSSharedData">
-															<int key="NSFlags">67121063</int>
+															<int key="NSFlags">67121059</int>
 															<int key="NSTextCheckingTypes">0</int>
 															<nil key="NSMarkedAttributes"/>
 															<reference key="NSBackgroundColor" ref="578772145"/>
@@ -414,8 +412,10 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 										<object class="WebPreferences" key="Preferences">
 											<string key="Identifier"/>
 											<dictionary class="NSMutableDictionary" key="Values">
-												<integer value="12" key="WebKitDefaultFixedFontSize"/>
-												<integer value="12" key="WebKitDefaultFontSize"/>
+												<integer value="13" key="WebKitDefaultFixedFontSize"/>
+												<integer value="16" key="WebKitDefaultFontSize"/>
+												<boolean value="NO" key="WebKitJavaEnabled"/>
+												<boolean value="NO" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
 												<integer value="1" key="WebKitMinimumFontSize"/>
 											</dictionary>
 										</object>
@@ -444,6 +444,12 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="508564811"/>
 				<string key="NSClassName">NSView</string>
+			</object>
+			<object class="NSObjectController" id="860551782">
+				<string key="NSObjectClassName">JBArticle</string>
+				<bool key="NSEditable">YES</bool>
+				<bool key="NSAutomaticallyPreparesContent">YES</bool>
+				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -503,6 +509,86 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="destination" ref="849584860"/>
 					</object>
 					<int key="connectionID">29</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.articleTableViewController.arrayController.selection.bodyText</string>
+						<reference key="source" ref="267397454"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="267397454"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.articleTableViewController.arrayController.selection.bodyText</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.articleTableViewController.arrayController.selection.bodyText</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentObject: self.articleTableViewController.arrayController.selection</string>
+						<reference key="source" ref="860551782"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="860551782"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">contentObject: self.articleTableViewController.arrayController.selection</string>
+							<string key="NSBinding">contentObject</string>
+							<string key="NSKeyPath">self.articleTableViewController.arrayController.selection</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.articleTableViewController.arrayController.selection.sourceLink</string>
+						<reference key="source" ref="1037634875"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="1037634875"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.articleTableViewController.arrayController.selection.sourceLink</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.articleTableViewController.arrayController.selection.sourceLink</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.articleTableViewController.arrayController.selection.headline</string>
+						<reference key="source" ref="835546755"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="835546755"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.articleTableViewController.arrayController.selection.headline</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.articleTableViewController.arrayController.selection.headline</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">54</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.articleTableViewController.arrayController.selection.altText</string>
+						<reference key="source" ref="849584860"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="849584860"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.articleTableViewController.arrayController.selection.altText</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.articleTableViewController.arrayController.selection.altText</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">56</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -678,6 +764,11 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="object" ref="355922537"/>
 						<reference key="parent" ref="459841452"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">30</int>
+						<reference key="object" ref="860551782"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -699,6 +790,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="30.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="4.CustomClassName">JBSplitView</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -711,7 +803,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">56</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

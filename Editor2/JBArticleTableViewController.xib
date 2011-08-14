@@ -148,7 +148,7 @@
 											</object>
 										</object>
 										<double key="NSRowHeight">70</double>
-										<int key="NSTvFlags">910163968</int>
+										<int key="NSTvFlags">574619648</int>
 										<reference key="NSDelegate"/>
 										<reference key="NSDataSource"/>
 										<int key="NSGridStyleMask">2</int>
@@ -380,7 +380,7 @@
 						<string key="label">content: arrangedObjects</string>
 						<reference key="source" ref="243427660"/>
 						<reference key="destination" ref="517722361"/>
-						<object class="NSNibBindingConnector" key="connector">
+						<object class="NSNibBindingConnector" key="connector" id="391202332">
 							<reference key="NSSource" ref="243427660"/>
 							<reference key="NSDestination" ref="517722361"/>
 							<string key="NSLabel">content: arrangedObjects</string>
@@ -390,6 +390,23 @@
 						</object>
 					</object>
 					<int key="connectionID">40</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">selectionIndexes: selectionIndexes</string>
+						<reference key="source" ref="243427660"/>
+						<reference key="destination" ref="517722361"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="243427660"/>
+							<reference key="NSDestination" ref="517722361"/>
+							<string key="NSLabel">selectionIndexes: selectionIndexes</string>
+							<string key="NSBinding">selectionIndexes</string>
+							<string key="NSKeyPath">selectionIndexes</string>
+							<reference key="NSPreviousConnector" ref="391202332"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">51</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -795,7 +812,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">49</int>
+			<int key="maxID">51</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
