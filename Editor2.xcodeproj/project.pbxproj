@@ -21,6 +21,7 @@
 		CD8B13A013F5F64000FDD49A /* JBMainArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */; };
 		CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */; };
 		CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */; };
+		CDA8D16313F7638B0007C2BF /* JBArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8D16213F7638B0007C2BF /* JBArticle.m */; };
 		CDC9F51D13F6EF64001E6017 /* License.text in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51A13F6EF64001E6017 /* License.text */; };
 		CDC9F51E13F6EF64001E6017 /* Markdown Readme.text in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */; };
 		CDC9F51F13F6EF64001E6017 /* Markdown.pl in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51C13F6EF64001E6017 /* Markdown.pl */; };
@@ -54,6 +55,8 @@
 		CD9A017E13F5EFC100D59C00 /* JBArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArticleTableViewController.h; sourceTree = "<group>"; };
 		CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArticleTableViewController.m; sourceTree = "<group>"; };
 		CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBArticleTableViewController.xib; sourceTree = "<group>"; };
+		CDA8D16113F7638B0007C2BF /* JBArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArticle.h; sourceTree = "<group>"; };
+		CDA8D16213F7638B0007C2BF /* JBArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArticle.m; sourceTree = "<group>"; };
 		CDC9F51A13F6EF64001E6017 /* License.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.text; sourceTree = "<group>"; };
 		CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Markdown Readme.text"; sourceTree = "<group>"; };
 		CDC9F51C13F6EF64001E6017 /* Markdown.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = Markdown.pl; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				CD15122513F5ECBF001AEA49 /* JBAppDelegate.h */,
 				CD15122613F5ECBF001AEA49 /* JBAppDelegate.m */,
 				CD15122813F5ECBF001AEA49 /* MainMenu.xib */,
+				CDA8D16113F7638B0007C2BF /* JBArticle.h */,
+				CDA8D16213F7638B0007C2BF /* JBArticle.m */,
 				CD15121A13F5ECBF001AEA49 /* Supporting Files */,
 				CD15123613F5ED2F001AEA49 /* JBMainWindowController.h */,
 				CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */,
@@ -244,6 +249,7 @@
 				CDFDFB7413F5F2AD0021EA6A /* NSSplitView+Utilities.m in Sources */,
 				CD8B139F13F5F64000FDD49A /* JBMainArticleViewController.m in Sources */,
 				CDC9F52613F6EFC1001E6017 /* NSString+Markdown.m in Sources */,
+				CDA8D16313F7638B0007C2BF /* JBArticle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
