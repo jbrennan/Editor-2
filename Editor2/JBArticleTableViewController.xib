@@ -56,6 +56,7 @@
 										<int key="NSvFlags">4352</int>
 										<string key="NSFrameSize">{320, 650}</string>
 										<reference key="NSSuperview" ref="731512885"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="1029817667"/>
 										<string key="NSReuseIdentifierKey">_NS:1197</string>
 										<bool key="NSEnabled">YES</bool>
@@ -156,6 +157,7 @@
 								</array>
 								<string key="NSFrameSize">{320, 650}</string>
 								<reference key="NSSuperview" ref="928939339"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="243427660"/>
 								<string key="NSReuseIdentifierKey">_NS:1195</string>
 								<reference key="NSDocView" ref="243427660"/>
@@ -167,6 +169,7 @@
 								<int key="NSvFlags">-2147483392</int>
 								<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 								<reference key="NSSuperview" ref="928939339"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="677823931"/>
 								<string key="NSReuseIdentifierKey">_NS:1214</string>
 								<reference key="NSTarget" ref="928939339"/>
@@ -178,6 +181,8 @@
 								<int key="NSvFlags">-2147483392</int>
 								<string key="NSFrame">{{1, 119}, {223, 15}}</string>
 								<reference key="NSSuperview" ref="928939339"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:1216</string>
 								<int key="NSsFlags">1</int>
 								<reference key="NSTarget" ref="928939339"/>
@@ -187,6 +192,7 @@
 						</array>
 						<string key="NSFrameSize">{320, 650}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="731512885"/>
 						<string key="NSReuseIdentifierKey">_NS:1193</string>
 						<int key="NSsFlags">133680</int>
@@ -198,6 +204,7 @@
 				</array>
 				<string key="NSFrameSize">{320, 650}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="928939339"/>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -283,7 +290,7 @@
 								<object class="NSTextField" id="811191761">
 									<reference key="NSNextResponder" ref="1029817667"/>
 									<int key="NSvFlags">266</int>
-									<string key="NSFrame">{{12, 53}, {218, 17}}</string>
+									<string key="NSFrame">{{12, 53}, {211, 17}}</string>
 									<reference key="NSSuperview" ref="1029817667"/>
 									<reference key="NSNextKeyView" ref="386151949"/>
 									<bool key="NSEnabled">YES</bool>
@@ -335,7 +342,7 @@
 								<object class="NSTextField" id="386151949">
 									<reference key="NSNextResponder" ref="1029817667"/>
 									<int key="NSvFlags">268</int>
-									<string key="NSFrame">{{232, 53}, {68, 17}}</string>
+									<string key="NSFrame">{{225, 53}, {75, 17}}</string>
 									<reference key="NSSuperview" ref="1029817667"/>
 									<reference key="NSNextKeyView" ref="842360605"/>
 									<string key="NSReuseIdentifierKey">_NS:3936</string>
@@ -370,6 +377,30 @@
 						<reference key="destination" ref="811191761"/>
 					</object>
 					<int key="connectionID">23</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">dateTextLabel</string>
+						<reference key="source" ref="1029817667"/>
+						<reference key="destination" ref="386151949"/>
+					</object>
+					<int key="connectionID">57</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">titleTextLabel</string>
+						<reference key="source" ref="1029817667"/>
+						<reference key="destination" ref="811191761"/>
+					</object>
+					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">summaryTextLabel</string>
+						<reference key="source" ref="1029817667"/>
+						<reference key="destination" ref="842360605"/>
+					</object>
+					<int key="connectionID">59</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -449,7 +480,7 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">44</int>
+					<int key="connectionID">56</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -601,6 +632,7 @@
 					<reference ref="1029817667"/>
 				</array>
 				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="20.CustomClassName">JBTableCellView</string>
 				<string key="20.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="20.userInterfaceItemIdentifier">MainTableList</string>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -615,9 +647,82 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">52</int>
+			<int key="maxID">59</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">JBArticleTableViewController</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">plusButtonWasPressed:</string>
+						<string key="NS.object.0">NSButton</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">plusButtonWasPressed:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">plusButtonWasPressed:</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="arrayController">NSArrayController</string>
+						<string key="plusButton">NSButton</string>
+						<string key="popupButton">NSPopUpButton</string>
+						<string key="tableView">NSTableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="arrayController">
+							<string key="name">arrayController</string>
+							<string key="candidateClassName">NSArrayController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="plusButton">
+							<string key="name">plusButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="popupButton">
+							<string key="name">popupButton</string>
+							<string key="candidateClassName">NSPopUpButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tableView">
+							<string key="name">tableView</string>
+							<string key="candidateClassName">NSTableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/JBArticleTableViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">JBTableCellView</string>
+					<string key="superclassName">NSTableCellView</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="dateTextLabel">NSTextField</string>
+						<string key="summaryTextLabel">NSTextField</string>
+						<string key="titleTextLabel">NSTextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="dateTextLabel">
+							<string key="name">dateTextLabel</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="summaryTextLabel">
+							<string key="name">summaryTextLabel</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="titleTextLabel">
+							<string key="name">titleTextLabel</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/JBTableCellView.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
