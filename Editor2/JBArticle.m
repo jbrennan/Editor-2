@@ -9,6 +9,11 @@
 #import "JBArticle.h"
 
 
+@interface JBArticle ()
+- (NSString *)slugForHeadline:(NSString *)headline;
+@end
+
+
 @implementation JBArticle
 @synthesize headline = _headline;
 @synthesize lede = _lede;
@@ -24,6 +29,7 @@
 @synthesize bodyText = _bodyText;
 @synthesize articleUpdated = _articleUpdated;
 @synthesize canSave = _canSave;
+@synthesize computedPermalink = _computedPermalink;
 
 
 #pragma mark -
@@ -89,7 +95,7 @@
 	NSString *bodyFileName = self.bodyFile;
 	
 	if (nil == bodyFileName) {
-		bodyFileName = [[[self.headline lowercaseString] stringByReplacingOccurrencesOfString:@" " withString:@"_"] stringByAppendingString:@".md"];
+		bodyFileName = [[self slugForHeadline:self.headline] stringByAppendingString:@".md"];
 	}
 	
 	NSString *directoryPath = [[[NSUserDefaults standardUserDefaults] stringForKey:@"articleDirectory"] stringByAppendingString:@"/"];
@@ -106,7 +112,7 @@
 	// The JS filename and path
 	NSString *jsFileName = self.metaFile;
 	if (nil == jsFileName) {
-		jsFileName = [[[self.headline lowercaseString] stringByReplacingOccurrencesOfString:@" " withString:@"_"] stringByAppendingString:@".js"];
+		jsFileName = [[self slugForHeadline:self.headline] stringByAppendingString:@".js"];
 	}
 	
 	NSString *jsFilePath = [directoryPath stringByAppendingString:jsFileName];
@@ -132,22 +138,12 @@
 	
 	
 	
-	NSDate *testDate = [NSDate dateWithNaturalLanguageString:createdAtString];
-	
-	if ([testDate isEqualToDate:self.createdAtDate])
-		NSLog(@"Round trip dates!!");
-	
-	//return;
+
 	
 	[articleDictionary setObject:createdAtString ? createdAtString : @"" forKey:kCreatedAtKey];
 	[articleDictionary setObject:updatedAtString ? updatedAtString : @"" forKey:kUpdatedAtKey];
 	[articleDictionary setObject:bodyFileName ? bodyFileName : @"" forKey:kBodyFileKey];
 	
-	
-	// Create a JSON representation for the article
-//	SBJSON *articleJSON = [[SBJSON alloc] init];
-//	[articleJSON setHumanReadable:YES];
-//	NSString *jsonString = [articleJSON stringWithObject:articleDictionary];
 	
 	
 	NSError *error = nil;
@@ -165,6 +161,28 @@
 	
 	
 	_articleUpdated = NO; // because we've saved, now the article can again be changed so we must track that
+}
+
+
+- (NSString *)slugForHeadline:(NSString *)headline {
+	
+	if ([self.computedPermalink length] > 0)
+		return self.computedPermalink;
+	
+	NSString *escapedString = [headline stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSString *URLString = [NSString stringWithFormat:@"http://nearthespeedoflight.com/api/colophon.slug/%@", escapedString];
+	
+	// This is a blocking call, but this method is executed off the main queue, so it won't block the UI.
+	NSError *error = nil;
+	NSLog(@"About to fetch a permalink for headline: %@", headline);
+	self.computedPermalink = [NSString stringWithContentsOfURL:[NSURL URLWithString:URLString] encoding:NSUTF8StringEncoding error:&error];
+	
+	if (nil == self.computedPermalink) {
+		NSLog(@"There was an error trying to get the slug for headline: %@, error: %@", headline, [error userInfo]);
+		self.computedPermalink = [[[[headline stringByReplacingOccurrencesOfString:@" " withString:@"_"] stringByReplacingOccurrencesOfString:@"?" withString:@"_"] stringByReplacingOccurrencesOfString:@"\"" withString:@"_"] stringByReplacingOccurrencesOfString:@"'" withString:@"_"];
+	}
+	
+	return self.computedPermalink;
 }
 
 

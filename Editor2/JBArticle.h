@@ -36,6 +36,7 @@
 	BOOL _articleUpdated;
 	BOOL _canSave;
 	
+	
 }
 
 @property (nonatomic, copy) NSString *headline;
@@ -54,6 +55,7 @@
 @property (nonatomic, readonly) NSString *bunchedUpBodyText; // Extra newlines stripped out for display in the table cells.
 @property (nonatomic, readonly) NSUInteger wordCount;
 @property (nonatomic, assign) BOOL canSave;						// Used so auto-save doesn't try to save an article before I've decided on its headline.
+@property (copy) NSString *computedPermalink;					// Either read in from file, or from the network.
 
 
 - (id)initNewArticle;
