@@ -27,7 +27,9 @@
 @end
 
 
-@implementation JBMainArticleViewController
+@implementation JBMainArticleViewController {
+	BOOL _saving;
+}
 @synthesize splitView = _splitView;
 @synthesize textView = _textView;
 @synthesize webView = _webView;
@@ -70,7 +72,7 @@
 
 
 - (void)setCurrentArticleAsSaved {
-	JBArticle *currentArticle = [self.articleTableViewController.arrayController selection];
+	id currentArticle = [self.articleTableViewController.arrayController selection];
 	
 	if (nil == currentArticle) {
 		NSLog(@"Tried to save current article, but there was non selected. Beep!");
@@ -78,7 +80,9 @@
 		return;
 	}
 	
-	[currentArticle setCanSave:YES];
+	// currentArticle is really just a proxy object
+	// it doesn't have methods, but it's fully KVC compliant.
+	[currentArticle setValue:[NSNumber numberWithBool:YES] forKey:@"canSave"];
 }
 
 
@@ -92,8 +96,21 @@
 - (void)autosave:(id)object {
 	NSLog(@"Autosave!");
 	
+	if (_saving) return;
+	
+	_saving = YES;
+	
 	[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"Saving..."];
 	
+	
+	// Set the current article's bodyText to have the textView's string value.
+	id currentArticle = [self.articleTableViewController.arrayController selection];
+	
+	
+	// currentArticle is really just a proxy object
+	// it doesn't have methods, but it's fully KVC compliant.
+	[currentArticle setValue:[_textView string] forKey:@"bodyText"];
+	//NSUInteger wordCount = [currentArticle valueForKey:@"wordCount"];
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^() {
 		// Do the save
 		for (int i = 0; i < 10000; i++) {
@@ -105,6 +122,7 @@
 		dispatch_queue_t mainQueue = dispatch_get_main_queue();
 		dispatch_async(mainQueue, ^() {
 			[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"Saved!"];
+			_saving = NO;
 		});
 		
 	});

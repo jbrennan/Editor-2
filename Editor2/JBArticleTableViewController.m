@@ -160,7 +160,7 @@
 		
 		
 		// Start observing the article?
-		
+		[self startObservingArticle:readArticle];
 		
 		// Add it to the array controller
 		[self.arrayController addObject:readArticle];

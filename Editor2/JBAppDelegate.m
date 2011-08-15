@@ -23,6 +23,11 @@
 }
 
 
+- (void)applicationDidResignActive:(NSNotification *)notification {
+	NSLog(@"Resign active");
+}
+
+
 - (void)setInfo:(NSString *)info {
 	[self.mainWindowController.infoLabel setStringValue:info];
 }

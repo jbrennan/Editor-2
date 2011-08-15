@@ -34,6 +34,7 @@
 	NSString *_bodyText;
 	
 	BOOL _articleUpdated;
+	BOOL _canSave;
 	
 }
 

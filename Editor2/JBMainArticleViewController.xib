@@ -47,7 +47,7 @@
 					<object class="NSTextField" id="849584860">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{107, 516}, {773, 22}}</string>
+						<string key="NSFrame">{{107, 515}, {773, 22}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="885043661"/>
@@ -241,7 +241,7 @@
 														<string key="NSFrameSize">{900, 14}</string>
 														<reference key="NSSuperview" ref="782233895"/>
 														<reference key="NSWindow"/>
-														<reference key="NSNextKeyView" ref="391292841"/>
+														<reference key="NSNextKeyView" ref="581252875"/>
 														<string key="NSReuseIdentifierKey">_NS:3760</string>
 														<object class="NSTextContainer" key="NSTextContainer" id="87667436">
 															<object class="NSLayoutManager" key="NSLayoutManager">
@@ -366,7 +366,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 										<string key="NSFrameSize">{900, 274}</string>
 										<reference key="NSSuperview" ref="317047452"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="782233895"/>
+										<reference key="NSNextKeyView" ref="391292841"/>
 										<string key="NSReuseIdentifierKey">_NS:148</string>
 										<int key="NSsFlags">133136</int>
 										<reference key="NSVScroller" ref="581252875"/>
@@ -512,6 +512,14 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<int key="connectionID">29</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="332994906"/>
+						<reference key="destination" ref="1037634875"/>
+					</object>
+					<int key="connectionID">61</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: self.articleTableViewController.arrayController.selection.bodyText</string>
 						<reference key="source" ref="267397454"/>
@@ -526,6 +534,14 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						</object>
 					</object>
 					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="267397454"/>
+						<reference key="destination" ref="1037634875"/>
+					</object>
+					<int key="connectionID">62</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -574,6 +590,14 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						</object>
 					</object>
 					<int key="connectionID">56</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="849584860"/>
+						<reference key="destination" ref="332994906"/>
+					</object>
+					<int key="connectionID">60</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -804,7 +828,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">58</int>
+			<int key="maxID">62</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
