@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class JBMainArticleViewController;
-@interface JBArticleTableViewController : NSViewController {
+@interface JBArticleTableViewController : NSViewController <NSTableViewDelegate> {
 	NSButton *_plusButton;
 	NSPopUpButton *_popupButton;
 	NSTableView *_tableView;

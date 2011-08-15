@@ -29,6 +29,7 @@
 
 //- (void)addNewArticle:(id)sender;
 - (void)setCurrentArticleAsSaved;
+- (void)forcePreviewUpdate;
 
 
 @end

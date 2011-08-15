@@ -55,14 +55,7 @@
 
 
 - (void)awakeFromNib {
-	
-//	NSURL *address = [NSURL URLWithString:@"http://vernacularoracular.com"];
-//	NSURLRequest *request = [NSURLRequest requestWithURL:address];
-//	
-//	[[self.webView mainFrame] loadRequest:request];
-//	
-//	[self requestPreviewUpdate];
-//	[self requestAutoSave];
+
 	
 	[[[self webView] preferences] setDefaultFontSize:16];
 	[[[self webView] preferences] setDefaultFixedFontSize:13];
@@ -146,6 +139,11 @@
 	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(preview:) object:nil];
 	
 	[self performSelector:@selector(preview:) withObject:nil afterDelay:0.5];
+}
+
+
+- (void)forcePreviewUpdate {
+	[self performSelector:@selector(preview:) withObject:nil afterDelay:0];
 }
 
 

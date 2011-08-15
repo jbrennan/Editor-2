@@ -41,6 +41,8 @@
 	[self loadArticlesFromDisk];
 	NSIndexSet *firstIndexSet = [NSIndexSet indexSetWithIndex:0];
 	[[self tableView] selectRowIndexes:firstIndexSet byExtendingSelection:NO];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableViewSelectionDidChange:) name:NSTableViewSelectionDidChangeNotification object:self.tableView];
 }
 
 
@@ -166,8 +168,11 @@
 		[self.arrayController addObject:readArticle];
 		
 	}
-	
-	
+}
+
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+	[self.mainArticleViewController forcePreviewUpdate];
 }
 
 
