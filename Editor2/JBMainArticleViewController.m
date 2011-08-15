@@ -60,6 +60,11 @@
 	[[[self webView] preferences] setDefaultFontSize:16];
 	[[[self webView] preferences] setDefaultFixedFontSize:13];
 	
+	
+	[[self textView] setFont:[NSFont fontWithName:@"Menlo" size:12.0f]];
+	
+	[[self textView] setTextContainerInset:CGSizeMake(20.0f, 20.0f)];
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
 }
 
