@@ -98,7 +98,7 @@
 		bodyFileName = [[self slugForHeadline:self.headline] stringByAppendingString:@".md"];
 	}
 	
-	NSString *directoryPath = [[[NSUserDefaults standardUserDefaults] stringForKey:@"articleDirectory"] stringByAppendingString:@"/"];
+	NSString *directoryPath = @"/Users/jbrennan/web/colophon/articles/";//[[[NSUserDefaults standardUserDefaults] stringForKey:@"articleDirectory"] stringByAppendingString:@"/"];
 	NSString *bodyFilePath = [directoryPath stringByAppendingString:bodyFileName];
 	
 	// Save the body text out to the markdown file

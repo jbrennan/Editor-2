@@ -27,5 +27,6 @@
 
 - (IBAction)plusButtonWasPressed:(NSButton *)sender;
 - (void)addNewArticle:(id)sender;
+- (void)saveAllArticles;
 
 @end

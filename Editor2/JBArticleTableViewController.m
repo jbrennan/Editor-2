@@ -46,6 +46,11 @@
 }
 
 
+- (void)saveAllArticles {
+	[(NSArray *)[self.arrayController arrangedObjects] makeObjectsPerformSelector:@selector(saveIfNeeded)];
+}
+
+
 - (NSArray *)createdAtDateSorter {
 	NSLog(@"Sorter?");
 	return [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"self.createdAtDate" ascending:NO]];

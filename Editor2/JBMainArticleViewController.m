@@ -62,8 +62,8 @@
 	
 	
 	[[self textView] setFont:[NSFont fontWithName:@"Menlo" size:12.0f]];
-	
 	[[self textView] setTextContainerInset:CGSizeMake(20.0f, 20.0f)];
+	
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
 }
@@ -81,10 +81,12 @@
 	// currentArticle is really just a proxy object
 	// it doesn't have methods, but it's fully KVC compliant.
 	[currentArticle setValue:[NSNumber numberWithBool:YES] forKey:@"canSave"];
+	[self requestAutoSave];
 }
 
 
 - (void)requestAutoSave {
+	[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"edited"];
 	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(autosave:) object:nil];
 	
 	[self performSelector:@selector(autosave:) withObject:nil afterDelay:4];
@@ -98,7 +100,7 @@
 	
 	_saving = YES;
 	
-	[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"Saving..."];
+	[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"saving"];
 	
 	
 	// Set the current article's bodyText to have the textView's string value.
@@ -108,18 +110,15 @@
 	// currentArticle is really just a proxy object
 	// it doesn't have methods, but it's fully KVC compliant.
 	[currentArticle setValue:[_textView string] forKey:@"bodyText"];
-	//NSUInteger wordCount = [currentArticle valueForKey:@"wordCount"];
+	
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^() {
 		// Do the save
-		for (int i = 0; i < 10000; i++) {
-			NSString *s = [[NSString alloc] initWithString:@"blah"];
-			NSLog(@"%@", s);
-		}
+		[self.articleTableViewController saveAllArticles];
 		
 		// update the label on the main queue
 		dispatch_queue_t mainQueue = dispatch_get_main_queue();
 		dispatch_async(mainQueue, ^() {
-			[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"Saved!"];
+			[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"saved"];
 			_saving = NO;
 		});
 		
