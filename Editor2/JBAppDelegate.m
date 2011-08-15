@@ -22,4 +22,14 @@
 	[[self.mainWindowController window] makeKeyAndOrderFront:self];
 }
 
+
+- (void)setInfo:(NSString *)info {
+	[self.mainWindowController.infoLabel setStringValue:info];
+}
+
+
+- (NSString *)info {
+	return [self.mainWindowController.infoLabel stringValue];
+}
+
 @end

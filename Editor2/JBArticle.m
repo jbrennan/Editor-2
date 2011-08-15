@@ -28,6 +28,7 @@
 #pragma mark -
 #pragma mark Object Lifecycle
 
+// For when an article is read off disk
 - (id)init {
 	if (self = [super init]) {
 		_articleUpdated = NO;
@@ -42,6 +43,7 @@
 }
 
 
+// For when a new article is created from the interface
 - (id)initNewArticle {
 	if (self = [super init]) {
 		_articleUpdated = YES;

@@ -26,6 +26,6 @@
 @property (nonatomic, strong) JBMainArticleViewController *mainArticleViewController;
 
 - (IBAction)plusButtonWasPressed:(NSButton *)sender;
-
+- (void)addNewArticle:(id)sender;
 
 @end

@@ -14,4 +14,6 @@
 @property (strong) IBOutlet NSWindow *window;
 @property (nonatomic, strong) JBMainWindowController *mainWindowController;
 
+@property (nonatomic, strong) NSString *info;
+
 @end

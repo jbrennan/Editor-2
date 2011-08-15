@@ -13,6 +13,7 @@
 
 @interface JBArticleTableViewController ()
 - (void)loadArticlesFromDisk;
+- (void)startObservingArticle:(JBArticle *)newArticle;
 @end
 
 
@@ -48,6 +49,56 @@
 
 
 - (IBAction)plusButtonWasPressed:(NSButton *)sender {
+}
+
+
+- (void)addNewArticle:(id)sender {
+	
+	JBArticle *newArticle = [[JBArticle alloc] initNewArticle];
+	
+	[self startObservingArticle:newArticle];
+	
+	[[self arrayController] addObject:newArticle];
+	
+}
+
+
+- (void)startObservingArticle:(JBArticle *)article {
+	
+	[article addObserver:self 
+			  forKeyPath:@"headline" 
+				 options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) 
+				 context:NULL];
+	
+	[article addObserver:self 
+			  forKeyPath:@"source" 
+				 options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) 
+				 context:NULL];
+	
+	[article addObserver:self 
+			  forKeyPath:@"bodyText" 
+				 options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) 
+				 context:NULL];
+	
+	[article addObserver:self 
+			  forKeyPath:@"altText" 
+				 options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) 
+				 context:NULL];
+	
+	[article addObserver:self 
+			  forKeyPath:@"createdAtDate" 
+				 options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) 
+				 context:NULL];
+}
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+	if ([object isKindOfClass:[JBArticle class]]) {
+		//[(JBArticle *)object setUpdatedAtDate:[NSDate date]];
+		[(JBArticle *)object setArticleUpdated:YES];
+		NSLog(@"Got KVO notification for an Article, have marked it as updated and changed the time");
+	}
 }
 
 

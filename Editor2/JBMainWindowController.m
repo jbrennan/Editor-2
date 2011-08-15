@@ -17,6 +17,7 @@
 @synthesize splitView = _splitView;
 @synthesize articleTableViewController = _articleTableViewController;
 @synthesize mainArticleViewController = _mainArticleViewController;
+@synthesize infoLabel = _infoLabel;
 
 
 - (id)initWithWindow:(NSWindow *)window {
@@ -43,6 +44,12 @@
 	self.splitView.leftView = [[self articleTableViewController] view];
 	self.splitView.rightView = [[self mainArticleViewController] view];
 	
+	[[self infoLabel] setStringValue:@"loaded"];
 }
 
+- (IBAction)addButtonWasPressed:(NSButton *)sender {
+	
+	[[self articleTableViewController] addNewArticle:sender];
+	
+}
 @end

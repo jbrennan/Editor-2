@@ -11,13 +11,18 @@
 #import "NSSplitView+Utilities.h"
 #import "NSString+Markdown.h"
 #import "JBArticleTableViewController.h"
+#import "JBAppDelegate.h"
+#import <dispatch/dispatch.h>
+#import "JBArticle.h"
 
 
 @interface JBMainArticleViewController ()
 
 - (void)textDidChange:(NSNotification *)notification;
 - (void)requestPreviewUpdate;
+- (void)requestAutoSave;
 - (void)preview:(id)object;
+- (void)startObservingArticle:(JBArticle *)article;
 
 @end
 
@@ -55,8 +60,39 @@
 	[[self.webView mainFrame] loadRequest:request];
 	
 	[self requestPreviewUpdate];
+	[self requestAutoSave];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
+}
+
+
+- (void)requestAutoSave {
+	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(autosave:) object:nil];
+	
+	[self performSelector:@selector(autosave:) withObject:nil afterDelay:4];
+}
+
+
+- (void)autosave:(id)object {
+	NSLog(@"Autosave!");
+	
+	[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"Saving..."];
+	
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^() {
+		// Do the save
+		for (int i = 0; i < 10000; i++) {
+			NSString *s = [[NSString alloc] initWithString:@"blah"];
+			NSLog(@"%@", s);
+		}
+		
+		// update the label on the main queue
+		dispatch_queue_t mainQueue = dispatch_get_main_queue();
+		dispatch_async(mainQueue, ^() {
+			[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"Saved!"];
+		});
+		
+	});
+	
 }
 
 
@@ -67,6 +103,7 @@
 - (void)textDidChange:(NSNotification *)note {
 	
 	[self requestPreviewUpdate];
+	[self requestAutoSave];
 	
 }
 

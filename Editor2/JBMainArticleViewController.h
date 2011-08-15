@@ -27,4 +27,6 @@
 @property (strong) IBOutlet NSTextField *altTextField;
 @property (nonatomic, unsafe_unretained) JBArticleTableViewController *articleTableViewController;
 
+- (void)addNewArticle:(id)sender;
+
 @end
