@@ -220,6 +220,14 @@
 					<int key="connectionID">12</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">wordCountLabel</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="353786869"/>
+					</object>
+					<int key="connectionID">18</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: self.articleTableViewController.arrayController.selection.wordCount</string>
 						<reference key="source" ref="353786869"/>
@@ -409,7 +417,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">17</int>
+			<int key="maxID">18</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -434,11 +442,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>infoLabel</string>
 							<string>splitView</string>
+							<string>wordCountLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
 							<string>JBSplitView</string>
+							<string>NSTextField</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -447,6 +457,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>infoLabel</string>
 							<string>splitView</string>
+							<string>wordCountLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -457,6 +468,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">splitView</string>
 								<string key="candidateClassName">JBSplitView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">wordCountLabel</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 						</object>
 					</object>

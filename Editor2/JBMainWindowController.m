@@ -18,6 +18,7 @@
 @synthesize articleTableViewController = _articleTableViewController;
 @synthesize mainArticleViewController = _mainArticleViewController;
 @synthesize infoLabel = _infoLabel;
+@synthesize wordCountLabel = _wordCountLabel;
 
 
 - (id)initWithWindow:(NSWindow *)window {
@@ -32,6 +33,9 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+	
+	[[[self infoLabel] cell] setBackgroundStyle:NSBackgroundStyleRaised];
+	[[[self wordCountLabel] cell] setBackgroundStyle:NSBackgroundStyleRaised];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 	

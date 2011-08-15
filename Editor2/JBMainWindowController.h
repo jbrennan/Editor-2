@@ -17,6 +17,7 @@
 	JBArticleTableViewController *_articleTableViewController;
 	JBMainArticleViewController *_mainArticleViewController;
 	NSTextField *_infoLabel;
+	NSTextField *_wordCountLabel;
 }
 
 
@@ -24,6 +25,7 @@
 @property (nonatomic, strong) JBArticleTableViewController *articleTableViewController;
 @property (nonatomic, strong) JBMainArticleViewController *mainArticleViewController;
 @property (strong) IBOutlet NSTextField *infoLabel;
+@property (strong) IBOutlet NSTextField *wordCountLabel;
 
 - (IBAction)addButtonWasPressed:(NSButton *)sender;
 - (void)setCurrentArticleAsSaved;

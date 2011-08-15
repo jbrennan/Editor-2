@@ -39,6 +39,8 @@
 
 - (void)awakeFromNib {
 	[self loadArticlesFromDisk];
+	NSIndexSet *firstIndexSet = [NSIndexSet indexSetWithIndex:0];
+	[[self tableView] selectRowIndexes:firstIndexSet byExtendingSelection:NO];
 }
 
 

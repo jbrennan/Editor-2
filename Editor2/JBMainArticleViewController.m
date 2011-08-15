@@ -54,13 +54,16 @@
 
 - (void)awakeFromNib {
 	
-	NSURL *address = [NSURL URLWithString:@"http://vernacularoracular.com"];
-	NSURLRequest *request = [NSURLRequest requestWithURL:address];
+//	NSURL *address = [NSURL URLWithString:@"http://vernacularoracular.com"];
+//	NSURLRequest *request = [NSURLRequest requestWithURL:address];
+//	
+//	[[self.webView mainFrame] loadRequest:request];
+//	
+//	[self requestPreviewUpdate];
+//	[self requestAutoSave];
 	
-	[[self.webView mainFrame] loadRequest:request];
-	
-	[self requestPreviewUpdate];
-	[self requestAutoSave];
+	[[[self webView] preferences] setDefaultFontSize:16];
+	[[[self webView] preferences] setDefaultFixedFontSize:13];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
 }
@@ -132,6 +135,7 @@
 	NSString *markdownString = [NSString stringByProcessingMarkdown:[_textView string]];
 	
 	[[_webView mainFrame] loadHTMLString:markdownString baseURL:nil];
+
 }
 
 
