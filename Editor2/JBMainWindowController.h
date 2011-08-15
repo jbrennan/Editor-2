@@ -26,5 +26,6 @@
 @property (strong) IBOutlet NSTextField *infoLabel;
 
 - (IBAction)addButtonWasPressed:(NSButton *)sender;
+- (void)setCurrentArticleAsSaved;
 
 @end

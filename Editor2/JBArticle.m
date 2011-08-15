@@ -23,6 +23,7 @@
 @synthesize updatedAtDate = _updatedAtDate;
 @synthesize bodyText = _bodyText;
 @synthesize articleUpdated = _articleUpdated;
+@synthesize canSave = _canSave;
 
 
 #pragma mark -
@@ -32,6 +33,7 @@
 - (id)init {
 	if (self = [super init]) {
 		_articleUpdated = NO;
+		_canSave = YES; // An article read in from disk is savable, because it's already been saved previously.
 	}
 	
 	return self;
@@ -52,6 +54,7 @@
 - (id)initNewArticle {
 	if (self = [super init]) {
 		_articleUpdated = YES;
+		_canSave = NO; // brand new article cannot be saved until I've designated it specifically.
 		self.createdAtDate = [NSDate date];
 		self.updatedAtDate = [NSDate date];
 	}
@@ -62,8 +65,10 @@
 
 
 
+// Shouldn't have a need to call this, but leaving it in just in case I need it.
 - (void)forceSave {
 	_articleUpdated = YES;
+	_canSave = YES;
 	[self saveIfNeeded];
 }
 
@@ -72,6 +77,11 @@
 	
 	// Don't need to save. Fail
 	if (!_articleUpdated)
+		return;
+	
+	
+	// Haven't settled on a headline yet.
+	if (!_canSave)
 		return;
 	
 	// Create a filename and filePath for the markdown/body text

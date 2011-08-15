@@ -52,4 +52,12 @@
 	[[self articleTableViewController] addNewArticle:sender];
 	
 }
+
+
+- (void)setCurrentArticleAsSaved {
+	[[self mainArticleViewController] setCurrentArticleAsSaved];
+}
+
+
+
 @end

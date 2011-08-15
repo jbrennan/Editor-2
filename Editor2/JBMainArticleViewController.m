@@ -22,7 +22,7 @@
 - (void)requestPreviewUpdate;
 - (void)requestAutoSave;
 - (void)preview:(id)object;
-- (void)startObservingArticle:(JBArticle *)article;
+//- (void)startObservingArticle:(JBArticle *)article;
 
 @end
 
@@ -63,6 +63,19 @@
 	[self requestAutoSave];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextDidChangeNotification object:_textView];
+}
+
+
+- (void)setCurrentArticleAsSaved {
+	JBArticle *currentArticle = [self.articleTableViewController.arrayController selection];
+	
+	if (nil == currentArticle) {
+		NSLog(@"Tried to save current article, but there was non selected. Beep!");
+		NSBeep();
+		return;
+	}
+	
+	[currentArticle setCanSave:YES];
 }
 
 

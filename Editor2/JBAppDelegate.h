@@ -16,4 +16,7 @@
 
 @property (nonatomic, strong) NSString *info;
 
+
+- (IBAction)setCurrentArticleAsSaved:(NSMenuItem *)sender;
+
 @end

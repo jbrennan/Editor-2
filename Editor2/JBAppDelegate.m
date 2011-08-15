@@ -32,4 +32,9 @@
 	return [self.mainWindowController.infoLabel stringValue];
 }
 
+- (IBAction)setCurrentArticleAsSaved:(NSMenuItem *)sender {
+	
+	[self.mainWindowController setCurrentArticleAsSaved];
+}
+
 @end
