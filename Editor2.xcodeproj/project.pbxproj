@@ -28,6 +28,7 @@
 		CDC9F51F13F6EF64001E6017 /* Markdown.pl in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51C13F6EF64001E6017 /* Markdown.pl */; };
 		CDC9F52613F6EFC1001E6017 /* NSString+Markdown.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC9F52513F6EFC1001E6017 /* NSString+Markdown.m */; };
 		CDE0F0D513F9A01A004B2E18 /* JBTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0F0D413F9A01A004B2E18 /* JBTableCellView.m */; };
+		CDE0F0D913F9A654004B2E18 /* JBDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0F0D813F9A654004B2E18 /* JBDateValueTransformer.m */; };
 		CDFDFB7013F5F2870021EA6A /* JBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */; };
 		CDFDFB7413F5F2AD0021EA6A /* NSSplitView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDFB7313F5F2AD0021EA6A /* NSSplitView+Utilities.m */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		CDC9F52513F6EFC1001E6017 /* NSString+Markdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Markdown.m"; path = "../NSString+Markdown.m"; sourceTree = "<group>"; };
 		CDE0F0D313F9A01A004B2E18 /* JBTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTableCellView.h; sourceTree = "<group>"; };
 		CDE0F0D413F9A01A004B2E18 /* JBTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTableCellView.m; sourceTree = "<group>"; };
+		CDE0F0D713F9A654004B2E18 /* JBDateValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDateValueTransformer.h; sourceTree = "<group>"; };
+		CDE0F0D813F9A654004B2E18 /* JBDateValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDateValueTransformer.m; sourceTree = "<group>"; };
 		CDFDFB6E13F5F2870021EA6A /* JBSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSplitView.h; sourceTree = "<group>"; };
 		CDFDFB6F13F5F2870021EA6A /* JBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSplitView.m; sourceTree = "<group>"; };
 		CDFDFB7213F5F2AD0021EA6A /* NSSplitView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Utilities.h"; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				CDAE4AFD13F8B9A700369443 /* JBWordCountValueTransformer.m */,
 				CDE0F0D313F9A01A004B2E18 /* JBTableCellView.h */,
 				CDE0F0D413F9A01A004B2E18 /* JBTableCellView.m */,
+				CDE0F0D713F9A654004B2E18 /* JBDateValueTransformer.h */,
+				CDE0F0D813F9A654004B2E18 /* JBDateValueTransformer.m */,
 			);
 			path = Editor2;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				CDA8D16313F7638B0007C2BF /* JBArticle.m in Sources */,
 				CDAE4AFE13F8B9A700369443 /* JBWordCountValueTransformer.m in Sources */,
 				CDE0F0D513F9A01A004B2E18 /* JBTableCellView.m in Sources */,
+				CDE0F0D913F9A654004B2E18 /* JBDateValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
