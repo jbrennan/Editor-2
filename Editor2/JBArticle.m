@@ -43,6 +43,11 @@
 }
 
 
+- (NSUInteger)wordCount {
+	return [[self.bodyText componentsSeparatedByString:@" "] count];
+}
+
+
 // For when a new article is created from the interface
 - (id)initNewArticle {
 	if (self = [super init]) {

@@ -22,6 +22,7 @@
 		CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */; };
 		CD9A018213F5EFC100D59C00 /* JBArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */; };
 		CDA8D16313F7638B0007C2BF /* JBArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8D16213F7638B0007C2BF /* JBArticle.m */; };
+		CDAE4AFE13F8B9A700369443 /* JBWordCountValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAE4AFD13F8B9A700369443 /* JBWordCountValueTransformer.m */; };
 		CDC9F51D13F6EF64001E6017 /* License.text in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51A13F6EF64001E6017 /* License.text */; };
 		CDC9F51E13F6EF64001E6017 /* Markdown Readme.text in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */; };
 		CDC9F51F13F6EF64001E6017 /* Markdown.pl in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F51C13F6EF64001E6017 /* Markdown.pl */; };
@@ -57,6 +58,8 @@
 		CD9A018013F5EFC100D59C00 /* JBArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBArticleTableViewController.xib; sourceTree = "<group>"; };
 		CDA8D16113F7638B0007C2BF /* JBArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArticle.h; sourceTree = "<group>"; };
 		CDA8D16213F7638B0007C2BF /* JBArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArticle.m; sourceTree = "<group>"; };
+		CDAE4AFC13F8B9A700369443 /* JBWordCountValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWordCountValueTransformer.h; sourceTree = "<group>"; };
+		CDAE4AFD13F8B9A700369443 /* JBWordCountValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWordCountValueTransformer.m; sourceTree = "<group>"; };
 		CDC9F51A13F6EF64001E6017 /* License.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.text; sourceTree = "<group>"; };
 		CDC9F51B13F6EF64001E6017 /* Markdown Readme.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Markdown Readme.text"; sourceTree = "<group>"; };
 		CDC9F51C13F6EF64001E6017 /* Markdown.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = Markdown.pl; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				CD8B139C13F5F64000FDD49A /* JBMainArticleViewController.h */,
 				CD8B139D13F5F64000FDD49A /* JBMainArticleViewController.m */,
 				CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */,
+				CDAE4AFC13F8B9A700369443 /* JBWordCountValueTransformer.h */,
+				CDAE4AFD13F8B9A700369443 /* JBWordCountValueTransformer.m */,
 			);
 			path = Editor2;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				CD8B139F13F5F64000FDD49A /* JBMainArticleViewController.m in Sources */,
 				CDC9F52613F6EFC1001E6017 /* NSString+Markdown.m in Sources */,
 				CDA8D16313F7638B0007C2BF /* JBArticle.m in Sources */,
+				CDAE4AFE13F8B9A700369443 /* JBWordCountValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
