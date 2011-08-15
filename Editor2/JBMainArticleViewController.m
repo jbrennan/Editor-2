@@ -106,11 +106,14 @@
 	// Set the current article's bodyText to have the textView's string value.
 	id currentArticle = [self.articleTableViewController.arrayController selection];
 	
-	
+	NSUInteger previousInsertionPoint = [[[self.textView selectedRanges] objectAtIndex:0] rangeValue].location;
 	// currentArticle is really just a proxy object
 	// it doesn't have methods, but it's fully KVC compliant.
 	[currentArticle setValue:[_textView string] forKey:@"bodyText"];
 	
+	
+	NSLog(@"insert point %lu", previousInsertionPoint);
+
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^() {
 		// Do the save
 		[self.articleTableViewController saveAllArticles];
@@ -119,6 +122,7 @@
 		dispatch_queue_t mainQueue = dispatch_get_main_queue();
 		dispatch_async(mainQueue, ^() {
 			[(JBAppDelegate *)[[NSApplication sharedApplication] delegate] setInfo:@"saved"];
+			[self.textView setSelectedRange:NSMakeRange(previousInsertionPoint, 0)];
 			_saving = NO;
 		});
 		

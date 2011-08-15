@@ -18,5 +18,6 @@
 
 
 - (IBAction)setCurrentArticleAsSaved:(NSMenuItem *)sender;
+- (IBAction)publish:(NSMenuItem *)sender;
 
 @end
