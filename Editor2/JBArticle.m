@@ -133,15 +133,16 @@
 	[dateFormatter setDateStyle:NSDateFormatterLongStyle];
 	[dateFormatter setTimeStyle:NSDateFormatterFullStyle];
 	
-	NSString *createdAtString = [[dateFormatter stringFromDate:self.createdAtDate] stringByReplacingOccurrencesOfString:@"," withString:@""];
-	NSString *updatedAtString = [[dateFormatter stringFromDate:self.updatedAtDate] stringByReplacingOccurrencesOfString:@"," withString:@""];
+	//NSString *createdAtString = [//[[dateFormatter stringFromDate:self.createdAtDate] stringByReplacingOccurrencesOfString:@"," withString:@""];
+	//NSString *updatedAtString = [[dateFormatter stringFromDate:self.updatedAtDate] stringByReplacingOccurrencesOfString:@"," withString:@""];
 	
-	
+	NSNumber *createdAtNumber = [NSNumber numberWithDouble:[self.createdAtDate timeIntervalSince1970]];
+	NSNumber *updatedAtNumber = [NSNumber numberWithDouble:[self.updatedAtDate timeIntervalSince1970]];
 	
 
 	
-	[articleDictionary setObject:createdAtString ? createdAtString : @"" forKey:kCreatedAtKey];
-	[articleDictionary setObject:updatedAtString ? updatedAtString : @"" forKey:kUpdatedAtKey];
+	[articleDictionary setObject:createdAtNumber ? createdAtNumber : @"" forKey:kCreatedAtKey];
+	[articleDictionary setObject:updatedAtNumber ? updatedAtNumber : @"" forKey:kUpdatedAtKey];
 	[articleDictionary setObject:bodyFileName ? bodyFileName : @"" forKey:kBodyFileKey];
 	
 	

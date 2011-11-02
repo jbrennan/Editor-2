@@ -9,15 +9,18 @@
 #import <Cocoa/Cocoa.h>
 
 @class JBMainWindowController;
+@class JBPreferencesWindowController;
 @interface JBAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) IBOutlet NSWindow *window;
 @property (nonatomic, strong) JBMainWindowController *mainWindowController;
+@property (nonatomic, strong) JBPreferencesWindowController *preferencesWindowController;
 
 @property (nonatomic, strong) NSString *info;
 
 
 - (IBAction)setCurrentArticleAsSaved:(NSMenuItem *)sender;
 - (IBAction)publish:(NSMenuItem *)sender;
+- (IBAction)showPreferences:(NSMenuItem *)sender;
 
 @end

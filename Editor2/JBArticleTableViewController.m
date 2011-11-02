@@ -14,6 +14,7 @@
 @interface JBArticleTableViewController ()
 - (void)loadArticlesFromDisk;
 - (void)startObservingArticle:(JBArticle *)newArticle;
+- (void)forceSave;
 @end
 
 
@@ -39,6 +40,11 @@
 
 - (void)awakeFromNib {
 	[self loadArticlesFromDisk];
+	
+	
+	//[self forceSave];
+	
+	
 	NSIndexSet *firstIndexSet = [NSIndexSet indexSetWithIndex:0];
 	[[self tableView] selectRowIndexes:firstIndexSet byExtendingSelection:NO];
 	
@@ -48,6 +54,11 @@
 
 - (void)saveAllArticles {
 	[(NSArray *)[self.arrayController arrangedObjects] makeObjectsPerformSelector:@selector(saveIfNeeded)];
+}
+
+
+- (void)forceSave {
+	[(NSArray *)[self.arrayController arrangedObjects] makeObjectsPerformSelector:@selector(forceSave)];
 }
 
 
@@ -162,8 +173,8 @@
 		readArticle.metaFile = jsFileName;
 		readArticle.sourceLink = [articleDictionary objectForKey:kSourceLinkKey];
 		
-		readArticle.createdAtDate = [NSDate dateWithNaturalLanguageString:[articleDictionary objectForKey:kCreatedAtKey]];
-		readArticle.updatedAtDate = [NSDate dateWithNaturalLanguageString:[articleDictionary objectForKey:kUpdatedAtKey]];
+		readArticle.createdAtDate = [NSDate dateWithTimeIntervalSince1970:[[articleDictionary objectForKey:kCreatedAtKey] doubleValue]];
+		readArticle.updatedAtDate = [NSDate dateWithTimeIntervalSince1970:[[articleDictionary objectForKey:kUpdatedAtKey] doubleValue]];
 		
 		
 		// Start observing the article?

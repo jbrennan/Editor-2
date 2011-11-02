@@ -17,6 +17,8 @@
 		CD15123813F5ED2F001AEA49 /* JBMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */; };
 		CD15123A13F5ED47001AEA49 /* JBMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD15123913F5ED47001AEA49 /* JBMainWindow.xib */; };
 		CD269B7413F5F85800955EED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD269B7313F5F85800955EED /* WebKit.framework */; };
+		CD511B1713F9CEAA000B24E2 /* JBPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD511B1613F9CEAA000B24E2 /* JBPreferencesWindowController.m */; };
+		CD511B1A13F9CEC3000B24E2 /* JBPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD511B1913F9CEC3000B24E2 /* JBPreferencesWindow.xib */; };
 		CD8B139F13F5F64000FDD49A /* JBMainArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8B139D13F5F64000FDD49A /* JBMainArticleViewController.m */; };
 		CD8B13A013F5F64000FDD49A /* JBMainArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */; };
 		CD9A018113F5EFC100D59C00 /* JBArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A017F13F5EFC100D59C00 /* JBArticleTableViewController.m */; };
@@ -52,6 +54,9 @@
 		CD15123713F5ED2F001AEA49 /* JBMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMainWindowController.m; sourceTree = "<group>"; };
 		CD15123913F5ED47001AEA49 /* JBMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBMainWindow.xib; sourceTree = "<group>"; };
 		CD269B7313F5F85800955EED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CD511B1513F9CEAA000B24E2 /* JBPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPreferencesWindowController.h; sourceTree = "<group>"; };
+		CD511B1613F9CEAA000B24E2 /* JBPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBPreferencesWindowController.m; sourceTree = "<group>"; };
+		CD511B1913F9CEC3000B24E2 /* JBPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBPreferencesWindow.xib; sourceTree = "<group>"; };
 		CD8B139C13F5F64000FDD49A /* JBMainArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMainArticleViewController.h; sourceTree = "<group>"; };
 		CD8B139D13F5F64000FDD49A /* JBMainArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMainArticleViewController.m; sourceTree = "<group>"; };
 		CD8B139E13F5F64000FDD49A /* JBMainArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBMainArticleViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +163,9 @@
 				CDE0F0D413F9A01A004B2E18 /* JBTableCellView.m */,
 				CDE0F0D713F9A654004B2E18 /* JBDateValueTransformer.h */,
 				CDE0F0D813F9A654004B2E18 /* JBDateValueTransformer.m */,
+				CD511B1513F9CEAA000B24E2 /* JBPreferencesWindowController.h */,
+				CD511B1613F9CEAA000B24E2 /* JBPreferencesWindowController.m */,
+				CD511B1913F9CEC3000B24E2 /* JBPreferencesWindow.xib */,
 			);
 			path = Editor2;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 				CDC9F51D13F6EF64001E6017 /* License.text in Resources */,
 				CDC9F51E13F6EF64001E6017 /* Markdown Readme.text in Resources */,
 				CDC9F51F13F6EF64001E6017 /* Markdown.pl in Resources */,
+				CD511B1A13F9CEC3000B24E2 /* JBPreferencesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +277,7 @@
 				CDAE4AFE13F8B9A700369443 /* JBWordCountValueTransformer.m in Sources */,
 				CDE0F0D513F9A01A004B2E18 /* JBTableCellView.m in Sources */,
 				CDE0F0D913F9A654004B2E18 /* JBDateValueTransformer.m in Sources */,
+				CD511B1713F9CEAA000B24E2 /* JBPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "JBAppDelegate.h"
 #import "JBMainWindowController.h"
+#import "JBPreferencesWindowController.h"
 #import <dispatch/dispatch.h>
 
 
@@ -15,6 +16,7 @@
 
 @synthesize window = _window;
 @synthesize mainWindowController = _mainWindowController;
+@synthesize preferencesWindowController = _preferencesWindowController;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -26,6 +28,15 @@
 
 - (void)applicationDidResignActive:(NSNotification *)notification {
 	NSLog(@"Resign active");
+}
+
+
+- (JBPreferencesWindowController *)preferencesWindowController {
+	if (nil != _preferencesWindowController)
+		return _preferencesWindowController;
+	
+	_preferencesWindowController = [[JBPreferencesWindowController alloc] initWithWindowNibName:@"JBPreferencesWindow"];
+	return _preferencesWindowController;
 }
 
 
@@ -82,6 +93,10 @@
 
 	
 	
+}
+
+- (IBAction)showPreferences:(NSMenuItem *)sender {
+	[[self preferencesWindowController] showWindow:self];
 }
 
 
