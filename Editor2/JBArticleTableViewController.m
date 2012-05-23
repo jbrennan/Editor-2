@@ -12,7 +12,7 @@
 
 
 @interface JBArticleTableViewController ()
-- (void)loadArticlesFromDisk;
+- (NSArray *)articlesFromDisk;
 - (void)startObservingArticle:(JBArticle *)newArticle;
 - (void)forceSave;
 @end
@@ -39,16 +39,24 @@
 
 
 - (void)awakeFromNib {
-	[self loadArticlesFromDisk];
-	
-	
-	//[self forceSave];
-	
-	
-	NSIndexSet *firstIndexSet = [NSIndexSet indexSetWithIndex:0];
-	[[self tableView] selectRowIndexes:firstIndexSet byExtendingSelection:NO];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableViewSelectionDidChange:) name:NSTableViewSelectionDidChangeNotification object:self.tableView];
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^() {
+		NSArray *articles = [self articlesFromDisk];
+		
+		dispatch_sync(dispatch_get_main_queue(),^() {
+			// Main Queue code
+			
+			for (id article in articles) {
+				[self.arrayController addObject:article];
+			}
+			
+			NSIndexSet *firstIndexSet = [NSIndexSet indexSetWithIndex:0];
+			[[self tableView] selectRowIndexes:firstIndexSet byExtendingSelection:NO];
+			
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableViewSelectionDidChange:) name:NSTableViewSelectionDidChangeNotification object:self.tableView];
+		});
+		
+	});
+
 }
 
 
@@ -122,7 +130,7 @@
 }
 
 
-- (void)loadArticlesFromDisk {
+- (NSArray *)articlesFromDisk {
 	
 	// Eventually this needs to be taken from the defaults for the currently selected website!
 	NSString *articlesDirectoryPath = @"/Users/jbrennan/web/colophon/articles";
@@ -134,7 +142,7 @@
 	
 	if (nil == articlesInDirectory) {
 		NSLog(@"The articles directory path returned a nil array. Path: %@, Error: %@", articlesDirectoryPath, [error userInfo]);
-		return;
+		return nil;
 	}
 	
 	
@@ -144,7 +152,7 @@
 	
 	[fileManager changeCurrentDirectoryPath:articlesDirectoryPath];
 	
-	
+	NSMutableArray *articlesToReturn = [NSMutableArray arrayWithCapacity:[filteredArray count]];
 	for (NSString *jsFileName in filteredArray) {
 		NSError *fileReadingError = nil;
 		NSData *jsFileData = [NSData dataWithContentsOfFile:jsFileName options:0 error:&fileReadingError];
@@ -181,9 +189,11 @@
 		[self startObservingArticle:readArticle];
 		
 		// Add it to the array controller
-		[self.arrayController addObject:readArticle];
+		[articlesToReturn addObject:readArticle];
 		
 	}
+	
+	return articlesToReturn;
 }
 
 

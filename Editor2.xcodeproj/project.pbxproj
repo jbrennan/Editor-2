@@ -219,7 +219,7 @@
 		CD15120613F5ECBF001AEA49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Jason Brennan";
 			};
 			buildConfigurationList = CD15120913F5ECBF001AEA49 /* Build configuration list for PBXProject "Editor2" */;
